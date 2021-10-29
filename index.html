@@ -26,16 +26,26 @@
                <p>{{ item.text }}</p>
            </div>
         </div>
+
+        
         <div class="sidebar">
 
 
             <i v-on:click="previousItem" class="arrow fas fa-chevron-up"></i>
 
 
-            <div class="side-img-container">
-                <img src="img/01.jpg" alt="">
+            <div v-for="(item, index) in items" class="side-img-container">
+             
+                <img :class='index === currentIndex? "light" : ""' :src="item.url" :alt="index + 1">
             </div>
-            <div class="side-img-container">
+
+
+
+
+
+
+
+            <!-- <div class="side-img-container">
                 <img class="active" src="img/02.jpg" alt="">
             </div>
             <div class="side-img-container">
@@ -46,7 +56,7 @@
             </div>
             <div class="side-img-container">
                 <img src="img/05.jpg" alt="">
-            </div>
+            </div> -->
 
 
             <i v-on:click="nextItem" class="arrow fas fa-chevron-down"></i>

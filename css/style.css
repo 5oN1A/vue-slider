@@ -82,6 +82,8 @@
 .side-img-container {
     width: 100%;
     height: 200px;
+    background-color: black;
+
 }
 
 
@@ -89,10 +91,10 @@
     width: 100%;
     height: 200px;
     object-fit: cover;
-    opacity: .5;
+    opacity: 0.5;
 }
 
-.side-img-container .active {
+.side-img-container .light {
     opacity: 1;
     border: 3px solid lightgray;
 }
