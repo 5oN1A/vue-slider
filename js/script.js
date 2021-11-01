@@ -15,7 +15,7 @@ new Vue({
     },
 
     methods: {
-        previousItem: function () {
+        previousItem () {
             this.currentIndex--;
 
             if (this.currentIndex < 0) {
@@ -25,7 +25,7 @@ new Vue({
             return this.currentIndex
         },
 
-        nextItem: function () {
+        nextItem () {
 
             this.currentIndex++;
 
@@ -35,5 +35,12 @@ new Vue({
 
             return this.currentIndex
         }
+    },
+
+
+   mounted() {
+        setInterval(() => {
+        this.nextItem()
+      }, 3000);
     }
 });

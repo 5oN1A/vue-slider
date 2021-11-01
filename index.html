@@ -31,6 +31,7 @@
         <div class="sidebar">
 
 
+
             <i v-on:click="previousItem" class="arrow fas fa-chevron-up"></i>
 
 
@@ -38,25 +39,6 @@
              
                 <img :class='index === currentIndex? "light" : ""' :src="item.url" :alt="index + 1">
             </div>
-
-
-
-
-
-
-
-            <!-- <div class="side-img-container">
-                <img class="active" src="img/02.jpg" alt="">
-            </div>
-            <div class="side-img-container">
-                <img src="img/03.jpg" alt="">
-            </div>
-            <div class="side-img-container">
-                <img src="img/04.jpg" alt="">
-            </div>
-            <div class="side-img-container">
-                <img src="img/05.jpg" alt="">
-            </div> -->
 
 
             <i v-on:click="nextItem" class="arrow fas fa-chevron-down"></i>
