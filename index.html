@@ -14,42 +14,33 @@
 </head>
 
 <body>
-    <div id="root" class="container">
+    <div v-on:keyup.up="previousItem" v-on:keyup.down="nextItem" id="root" class="container">
 
-        <div v-for="(item, index) in items"  class="full-img-container"
-        :class='index === currentIndex? "active" : ""'>
-           
-        
-        <img :src="item.url" :alt="index + 1">
-           <div class="full-img-text">
-               <h1>{{ item.title }}</h1>
-               <p>{{ item.text }}</p>
-           </div>
+        <div v-for="(item, index) in items" class="full-img-container" :class='index === currentIndex? "active" : ""'>
+            <img :src="item.url" :alt="index + 1">
+            <div class="full-img-text">
+                <h1>{{ item.title }}</h1>
+                <p>{{ item.text }}</p>
+            </div>
         </div>
 
-        
+        <!--SIDEBAR-->
+
         <div class="sidebar">
-
-
-
-            <i v-on:click="previousItem" class="arrow fas fa-chevron-up"></i>
-
-
+            <button v-on:click="previousItem" class="arrow fas fa-chevron-up"></button>
             <div v-for="(item, index) in items" class="side-img-container">
-             
                 <img :class='index === currentIndex? "light" : ""' :src="item.url" :alt="index + 1">
             </div>
-
-
-            <i v-on:click="nextItem" class="arrow fas fa-chevron-down"></i>
+            <button v-on:click="nextItem" class="arrow fas fa-chevron-down"></button>
         </div>
+
     </div>
 
 
 
 
 
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

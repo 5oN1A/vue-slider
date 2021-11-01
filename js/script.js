@@ -38,9 +38,13 @@ new Vue({
     },
 
 
+/*
    mounted() {
         setInterval(() => {
         this.nextItem()
       }, 3000);
     }
+*/
+
+
 });
